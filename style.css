@@ -1,0 +1,180 @@
+/* Julio Sampietro Christ — personal website */
+
+:root {
+  --paper: #ffffff;
+  --ink: #1d2733;
+  --muted: #5d6874;
+  --rule: #e2e6eb;
+  --accent: #1f3a5f;
+  --link: #2a5a8c;
+  --strip: #dbe5f1;
+  --measure: 44rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #151b22;
+    --ink: #e4e8ed;
+    --muted: #9aa5b1;
+    --rule: #2b3540;
+    --accent: #a9c4e4;
+    --link: #8fb7e3;
+    --strip: #2a3b52;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.1875rem;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+}
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 2px; }
+
+/* ---------- header ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 1.3rem;
+  letter-spacing: 0.01em;
+}
+.brand:hover { color: var(--accent); }
+
+.motif { width: 3.4rem; height: auto; flex: none; }
+.motif .strip { fill: var(--strip); }
+.motif .lag { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; }
+.motif .pt { fill: var(--accent); }
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.4rem;
+}
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 1.05rem;
+  padding-bottom: 0.15rem;
+  border-bottom: 1px solid transparent;
+}
+nav a:hover { color: var(--ink); }
+nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--accent); }
+
+/* ---------- main ---------- */
+
+main { padding: 2.75rem 0 3rem; }
+
+h1, h2, h3 {
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--accent);
+}
+h1 { font-size: 2.3rem; margin: 0 0 0.4rem; letter-spacing: -0.005em; }
+h2 { font-size: 1.55rem; margin: 3rem 0 1rem; }
+h3 { font-size: 1.15rem; margin: 1.75rem 0 0.6rem; font-style: italic; color: var(--ink); }
+
+p { margin: 0 0 1rem; }
+
+.intro {
+  display: grid;
+  grid-template-columns: 13rem 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.intro img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+.intro h1 { margin-top: -0.2rem; }
+
+.contact { color: var(--muted); font-size: 1.02rem; }
+.contact p { margin: 0 0 0.2rem; }
+
+/* papers and talks */
+
+.entries { list-style: none; margin: 0; padding: 0; }
+.entries li { margin: 0 0 1.15rem; }
+.entries .title { font-style: italic; }
+.entries .meta { display: block; color: var(--muted); font-size: 1.02rem; }
+
+.talks li { margin-bottom: 0.8rem; }
+
+details { margin-top: 1.25rem; }
+summary {
+  cursor: pointer;
+  color: var(--link);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+summary:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+
+figure { margin: 1.5rem 0 0; }
+figure img { width: 100%; height: auto; display: block; border-radius: 4px; }
+figcaption { color: var(--muted); font-size: 0.98rem; margin-top: 0.5rem; font-style: italic; }
+
+/* mini-course */
+
+.lead { font-size: 1.22rem; color: var(--muted); margin-bottom: 1.75rem; }
+
+.lectures { margin: 0; padding-left: 1.4rem; }
+.lectures li { margin-bottom: 1.25rem; padding-left: 0.3rem; }
+.lectures li::marker { color: var(--accent); }
+.lectures .topics { color: var(--muted); font-size: 1.05rem; }
+.soon { color: var(--muted); font-size: 1rem; font-style: italic; }
+
+/* ---------- footer ---------- */
+
+footer {
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+footer .wrap { padding-top: 1.25rem; padding-bottom: 2rem; }
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 640px) {
+  body { font-size: 1.1rem; }
+  .intro { grid-template-columns: 1fr; gap: 1.25rem; }
+  .intro img { max-width: 14rem; }
+  h1 { font-size: 2rem; }
+  nav ul { gap: 1.1rem; }
+}
