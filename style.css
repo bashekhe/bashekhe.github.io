@@ -152,7 +152,15 @@ figcaption { color: var(--muted); font-size: 0.98rem; margin-top: 0.5rem; font-s
 
 /* mini-course */
 
-.lead { font-size: 1.22rem; color: var(--muted); margin-bottom: 1.75rem; }
+.lead { font-size: 1.22rem; color: var(--muted); margin-bottom: 1.5rem; }
+
+.when {
+  border-left: 3px solid var(--accent);
+  padding: 0.2rem 0 0.2rem 1rem;
+  margin: 0 0 1.75rem;
+  font-size: 1.15rem;
+}
+.when strong { font-weight: 500; color: var(--accent); font-size: 1.3rem; }
 
 .lectures { margin: 0; padding-left: 1.4rem; }
 .lectures li { margin-bottom: 1.25rem; padding-left: 0.3rem; }
